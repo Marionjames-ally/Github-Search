@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubFormComponent implements OnInit {
 
+  searchTerm:string;
+
   constructor() { }
 
   ngOnInit() {

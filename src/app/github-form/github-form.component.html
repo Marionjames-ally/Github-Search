@@ -1,14 +1,12 @@
 <div class="container">
-
-<form >
+    <form >
     <div class="form-row">
         <div class="col-md-4">
-            <input type="text" class="form-control" placeholder="Enter Username">
+            <input type="text" class="form-control" placeholder="Enter Username" name="searchTerm" [(ngModel)]="searchTerm">
         </div>
         <div class="col-md-2">
             <button class="btn btn-dark">Search</button>
         </div>
-
     </div>
 </form>
 </div>
