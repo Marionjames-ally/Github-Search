@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubHttpServiceService }from '../services/github-http-service.service'
 
 @Component({
   selector: 'app-github',
@@ -7,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubComponent implements OnInit {
 
-  constructor() { }
+  constructor(public githubHttpService:GithubHttpServiceService) { }
 
   ngOnInit() {
   }
 searchGithub(searchTerm){
-  console.log(searchTerm);
+this.githubHttpService.searchGithub(searchTerm)
 }
 }
