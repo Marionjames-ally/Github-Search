@@ -13,6 +13,7 @@ export class GithubComponent implements OnInit {
   constructor(public githubHttpService:GithubHttpServiceService) { }
 
   ngOnInit() {
+    this.searchGithub("gitmarion");
   }
 searchGithub(searchTerm){
 this.githubHttpService.searchGithub(searchTerm).then(

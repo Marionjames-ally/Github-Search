@@ -11,18 +11,19 @@ export class GithubHttpServiceService {
   githubs: any;
   constructor(private http:HttpClient) { }
 searchGithub(searchTerm:string){
-  let searchEndpoint="https://api.github.com/search?api_key="+environment.GITHUBAPIKEY;
-  searchEndpoint += "&q"+ searchTerm;
+  let searchEndpoint="https://api.github.com/users/" + searchTerm + "?access_token=" + environment.GITHUBAPIKEY;
+
+  //searchEndpoint += "&q"+ searchTerm;
   let promise = new Promise((resolve, reject)=>{
     this.http.get(searchEndpoint).toPromise().then(
       (results)=>{
-       this.githubs=[];
-       for(let i=0; i<results["data"].length; i++){
-        let url = results["data"][i]["repositories"]["fixed_height"]["url"];
-        let giph = new Github(url);
-        this.githubs.push(Github);
-      }
-        console.log(this.githubs);
+      //  this.githubs=[];
+      //  for(let i=0; i<results["data"].length; i++){
+      //   let url = results["data"][i]["repositories"]["url"];
+      //   let github = new Github(url);
+      //   this.githubs.push(Github);
+      
+        console.log(searchEndpoint);
         resolve()
       },
       (error)=>{
