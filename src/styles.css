@@ -1,0 +1,12 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    background-color: beige;
+    }
+li{
+    text-decoration: none;
+    color: black;
+}
+input{
+    padding:30px;
+}
