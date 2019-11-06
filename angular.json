@@ -118,8 +118,17 @@
               "devServerTarget": "GithuhubSearch:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/GithuhubSearch",
+            "netlifyToken": "4bc4830c4b7fcccfe009c68794258f76cf277d1357ded9ea73b7f069621d8c30",
+            "siteId": "f56172c5-3cc7-48bb-832a-b7b6987e051a"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "GithuhubSearch"
 }

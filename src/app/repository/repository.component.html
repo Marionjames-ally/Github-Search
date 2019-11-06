@@ -26,7 +26,7 @@
 
       <div class="output card col-md-7">
         <h2>All Repositories</h2>
-          <div *ngFor="let rep of repos.reposArray">
+          <div *ngFor="let rep of repos">
               <div class="item">
                 <h3 appHighlight><strong>{{rep.name}}</strong></h3>
                 <h6  *ngIf><strong>Description: </strong><em>{{rep.description}}</em></h6>
